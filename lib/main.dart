@@ -1,8 +1,14 @@
+import 'package:fin_state_analytical/features/financial_analyzer/data/models/raw_finalcial.data.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:hive_ce_flutter/hive_ce_flutter.dart';
 import 'core/di/injection_container.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
+  await Hive.initFlutter();
+  Hive.registerAdapter(RawFinancialDataAdapter());
   await initDepedencies();
 
   runApp(const MyApp());
