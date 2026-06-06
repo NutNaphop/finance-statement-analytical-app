@@ -3,6 +3,7 @@ import 'package:fin_state_analytical/features/financial_analyzer/data/datasource
 import 'package:fin_state_analytical/features/financial_analyzer/data/datasources/gemini_remote_datasource.dart';
 import 'package:fin_state_analytical/features/financial_analyzer/data/repositories/financial_report_repository_impl.dart';
 import 'package:fin_state_analytical/features/financial_analyzer/domain/repositories/financial_report_repository.dart';
+import 'package:fin_state_analytical/features/financial_analyzer/presentation/blocs/financial_analyzer_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 final sl = GetIt.instance;
@@ -24,4 +25,8 @@ Future<void> initDepedencies() async {
       localDataSource: sl(),
     ),
   );
+
+  // Bloc
+  sl.registerFactory<FinancialAnalyzerBloc>(
+      () => FinancialAnalyzerBloc(repository: sl()));
 }
