@@ -74,7 +74,7 @@ packages:
     source: hosted
     version: "4.1.1"
   build_runner:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: build_runner
       sha256: "1523ce62448ebac2c15a8ba5fbad8acac169788658a7dd2a1c2d9c2a9318b9a6"
@@ -292,7 +292,7 @@ packages:
     source: hosted
     version: "2.3.4"
   hive_ce_generator:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: hive_ce_generator
       sha256: "69800cb5e9bde43d457d24d38c20f458cf95b122c25ba04cfe9519578f31548d"
