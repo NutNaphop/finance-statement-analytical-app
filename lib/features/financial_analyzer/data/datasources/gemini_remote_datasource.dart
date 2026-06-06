@@ -87,7 +87,7 @@ class GeminiRemoteDataSourceImpl implements GeminiRemoteDataSource {
     };
 
     final response = await _dio.post(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$_apiKey",
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$_apiKey",
       data: req,
       options: Options(headers: {"Content-Type": "application/json"}),
     );

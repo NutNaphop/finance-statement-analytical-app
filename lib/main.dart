@@ -1,4 +1,5 @@
 import 'package:fin_state_analytical/features/financial_analyzer/data/models/raw_finalcial.data.dart';
+import 'package:fin_state_analytical/features/financial_analyzer/presentation/pages/financial_analyzer_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hive_ce_flutter/hive_ce_flutter.dart';
@@ -21,15 +22,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Financial Analyzer',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      home: const FinancialAnalyzerPage(),
     );
   }
 }
+
