@@ -49,6 +49,10 @@ lib/
     *   UI Widgets must only emit events and listen to state changes.
 3.  **Data Caching**
     *   Successfully parsed and calculated financial reports should be cached locally in **Hive** for offline viewing and analysis history.
+4.  **AI Collaboration Rule (CRITICAL)**
+    *   **Rule:** For all logic implementations (e.g., API integration, BLoC, DB caching, math logic), the AI Assistant must focus on explaining the architectural guidelines, flow, and providing code templates or pseudo-code first. The developer will write and compile all code files themselves to facilitate "Learning by Doing".
+5.  **Architecture Consistency & Best Practices**
+    *   **Rule:** Strictly follow the Feature-First Clean Architecture guidelines defined in the [implementation_plan.md](file:///C:/Users/nutna/.gemini/antigravity-ide/brain/dcb0bdd4-1ee2-4d28-a566-655329cbc482/implementation_plan.md). Core packages must resolve, code must follow lint rules, and features must remain decoupled.
 
 ---
 
